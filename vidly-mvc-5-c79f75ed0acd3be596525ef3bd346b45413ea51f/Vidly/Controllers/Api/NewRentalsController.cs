@@ -13,6 +13,10 @@ namespace Vidly.Controllers.Api
     public class NewRentalsController : ApiController
     {
         private ApplicationDbContext _context;
+        public NewRentalsController()
+        {
+            _context = new ApplicationDbContext();
+        }
         [HttpPost]
         public IHttpActionResult CreateRental(NewRentalDto newRental)
         {
@@ -25,6 +29,13 @@ namespace Vidly.Controllers.Api
 
             foreach (var movie in movies)
             {
+                if (movie.NumberAvailable == 0)
+                {
+                    return BadRequest("Movie is out of stock!");
+                }
+
+                movie.NumberAvailable --;
+
                 var rental = new Rentals
                 {
                     customer = customer,

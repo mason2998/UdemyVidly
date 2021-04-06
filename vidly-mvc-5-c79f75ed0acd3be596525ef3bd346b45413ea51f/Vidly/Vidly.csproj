@@ -259,6 +259,14 @@
     <Compile Include="Migrations\202104061150011_AddRentalClassToDb.Designer.cs">
       <DependentUpon>202104061150011_AddRentalClassToDb.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202104061226420_AddNumberAvailableProperty.cs" />
+    <Compile Include="Migrations\202104061226420_AddNumberAvailableProperty.Designer.cs">
+      <DependentUpon>202104061226420_AddNumberAvailableProperty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104061235505_AddAvaible.cs" />
+    <Compile Include="Migrations\202104061235505_AddAvaible.Designer.cs">
+      <DependentUpon>202104061235505_AddAvaible.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationUser.cs" />
@@ -636,6 +644,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202104061150011_AddRentalClassToDb.resx">
       <DependentUpon>202104061150011_AddRentalClassToDb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104061226420_AddNumberAvailableProperty.resx">
+      <DependentUpon>202104061226420_AddNumberAvailableProperty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104061235505_AddAvaible.resx">
+      <DependentUpon>202104061235505_AddAvaible.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
