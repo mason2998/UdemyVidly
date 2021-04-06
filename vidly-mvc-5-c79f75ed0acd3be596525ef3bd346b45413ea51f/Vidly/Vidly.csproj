@@ -255,6 +255,10 @@
     <Compile Include="Migrations\202104011032306_AddPhoneNumberToRegistration.Designer.cs">
       <DependentUpon>202104011032306_AddPhoneNumberToRegistration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202104061150011_AddRentalClassToDb.cs" />
+    <Compile Include="Migrations\202104061150011_AddRentalClassToDb.Designer.cs">
+      <DependentUpon>202104061150011_AddRentalClassToDb.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationUser.cs" />
@@ -265,6 +269,7 @@
     <Compile Include="Models\MembershipType.cs" />
     <Compile Include="Models\Min18YearsIfAMember.cs" />
     <Compile Include="Models\Movie.cs" />
+    <Compile Include="Models\Rentals.cs" />
     <Compile Include="Models\RoleName.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -628,6 +633,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202104011032306_AddPhoneNumberToRegistration.resx">
       <DependentUpon>202104011032306_AddPhoneNumberToRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104061150011_AddRentalClassToDb.resx">
+      <DependentUpon>202104061150011_AddRentalClassToDb.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
