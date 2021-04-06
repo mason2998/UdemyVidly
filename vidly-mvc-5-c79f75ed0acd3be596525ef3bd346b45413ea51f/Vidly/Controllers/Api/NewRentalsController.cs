@@ -19,13 +19,22 @@ namespace Vidly.Controllers.Api
         }
         [HttpPost]
         public IHttpActionResult CreateRental(NewRentalDto newRental)
-        {
+        {            
+            if (newRental.MovieIds.Count == 0)
+                return BadRequest("No movies have been submitted");
+
             var customer = _context.Customers.
-                Single(c => c.Id == newRental.CustomerId);
+                SingleOrDefault(c => c.Id == newRental.CustomerId);
+
+            if (customer == null)
+                return BadRequest("Customer is not valid");
 
             var movies = _context.Movies.
                 Where(m => newRental.MovieIds.
-                Contains(m.Id));
+                Contains(m.Id)).ToList();
+
+            if (movies.Count != newRental.MovieIds.Count)
+                return BadRequest("One or more of the submitted movies is invalid");
 
             foreach (var movie in movies)
             {
