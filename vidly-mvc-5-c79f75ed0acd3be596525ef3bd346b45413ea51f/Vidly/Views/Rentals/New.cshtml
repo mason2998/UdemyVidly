@@ -7,7 +7,7 @@
 <h2>New Rental Form</h2>
 
 
-<form>
+<form id="newRental">
     <div class="form-group">
         <label>Customer</label>
         <div class="tt-container">
@@ -85,6 +85,22 @@
 
                 vm.movieIds.push(movie.id);
             });
+
+            $("#newRental").submit(function (e) {
+                e.preventDefault();
+
+                $.ajax({
+                    url: "/api/newRentals",
+                    method: "post",
+                    data: vm
+                })
+                    .done(function () {
+                        toastr.success("Rentals successfully recorded!")
+                    })
+                    .fail(function () {
+                        toastr.error("Warning! Rentals not successful!")
+                    })
+            })
         })
     </script>    
 }
